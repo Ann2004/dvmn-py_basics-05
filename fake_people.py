@@ -1,6 +1,7 @@
 import file_operations
 from faker import Faker
 import random
+import os
 
 
 def main():
@@ -84,6 +85,9 @@ def main():
         'Я': 'Я̋',
         ' ': ' '
     }
+
+    output_dir = 'output/svg'
+    os.makedirs(output_dir, exist_ok=True)
 
     for i in range(1, 11):
         fake = Faker('ru_RU')
